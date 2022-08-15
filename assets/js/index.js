@@ -37,7 +37,7 @@ function getUserInfo() {
             if (res.status !== 0) {
                 return layui.layer.msg('获取用户信息失败')
             }
-
+            console.log(res);
             //调用这个函数渲染用户的头像
             renderAvatar(res.data)
         }
@@ -69,7 +69,7 @@ function renderAvatar(user) {
     //按需渲染用户的头像
     if (user.user_pic !== null) {
         //渲染图片头像
-        $('.layui-nav-img').attr('str', user_pic).show();
+        $('.layui-nav-img').attr('src', user.user_pic).show();
         $('.text_avat').hide()
     } else {
         //渲染文本头像
