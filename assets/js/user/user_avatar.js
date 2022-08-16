@@ -75,7 +75,7 @@ $(function() {
 
                 layer.msg('更换头像成功');
 
-                // window.parent.getUserInfo()
+                window.parent.getUserInfo()
             }
         })
     })
